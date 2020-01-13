@@ -1,0 +1,8 @@
+{
+  "background_color": "#100818",
+  "theme_color": "#000000",
+  "name": "evilfactorylabs.org",
+  "short_name": "evilfactorylabs.org",
+  "display": "minimal-ui",
+  "start_url": "/"
+}
