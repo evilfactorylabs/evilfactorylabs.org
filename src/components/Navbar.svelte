@@ -1,3 +1,28 @@
+<script>
+  import { beforeUpdate } from 'svelte'
+
+  export let segment
+
+  let isSidebarOpen = false
+  let previousSegment = null
+
+  function toggleSidebar() {
+    isSidebarOpen = !isSidebarOpen
+  }
+
+  beforeUpdate(() => {
+    if (previousSegment !== segment) {
+      toggleSidebar()
+
+      if (segment === undefined || previousSegment === null) {
+        isSidebarOpen = false
+      }
+    }
+
+    previousSegment = segment
+  })
+</script>
+
 <style>
   .c-navbar {
     position: fixed;
@@ -7,32 +32,55 @@
     font-family: var(--sans-serif-font);
     font-weight: bold;
     padding: 2rem 2rem;
-    padding-top: 3rem;
+    padding-top: 1.5rem;
   }
 
   .c-navbar__left {
     float: left;
-    width: 30%;
+    width: 50%;
     margin: auto;
     text-align: center;
   }
 
   .c-navbar__right {
     float: left;
-    width: 70%;
+    width: 50%;
     text-align: right;
   }
 
   .c-navbar__link {
-    display: inline-block;
+    display: block;
     padding-left: 0.8rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
     text-decoration: none;
+    transition: 0.3s all;
+    transform: translate(150px, 0);
+  }
+
+  .c-navbar__link--is-active {
+    color: var(--primary-color);
+  }
+
+  .c-navbar__link--is-show {
+    transform: translate(0, 0);
   }
 
   .c-navbar__link:hover {
     color: var(--primary-color);
+  }
+
+  .c-navbar__toggler {
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: right;
   }
 
   @media screen and (min-width: 60em) {
@@ -53,6 +101,11 @@
       display: inline-block;
       letter-spacing: 2px;
       padding-left: 1.5rem;
+      transform: translate(0, 0);
+    }
+
+    .c-navbar__toggler {
+      display: none;
     }
   }
 </style>
@@ -64,9 +117,36 @@
     </a>
   </div>
   <div class="c-navbar__right">
-    <a class="c-navbar__link" href="/tentang">Tentang</a>
-    <a class="c-navbar__link" href="/etos">Etos</a>
-    <a class="c-navbar__link" href="/kiprah">Kiprah</a>
-    <a class="c-navbar__link" href="/dukungan">Dukung(an)</a>
+    <button class="c-navbar__toggler" on:click={toggleSidebar}>
+      {isSidebarOpen ? 'Tutup' : 'Menu'}
+    </button>
+    <a
+      class="c-navbar__link"
+      class:c-navbar__link--is-show={isSidebarOpen}
+      class:c-navbar__link--is-active={segment === 'tentang'}
+      href="/tentang">
+      Tentang
+    </a>
+    <a
+      class="c-navbar__link"
+      class:c-navbar__link--is-show={isSidebarOpen}
+      class:c-navbar__link--is-active={segment === 'etos'}
+      href="/etos">
+      Etos
+    </a>
+    <a
+      class="c-navbar__link"
+      class:c-navbar__link--is-show={isSidebarOpen}
+      class:c-navbar__link--is-active={segment === 'kiprah'}
+      href="/kiprah">
+      Kiprah
+    </a>
+    <a
+      class="c-navbar__link"
+      class:c-navbar__link--is-show={isSidebarOpen}
+      class:c-navbar__link--is-active={segment === 'dukungan'}
+      href="/dukungan">
+      Dukung(an)
+    </a>
   </div>
 </nav>
