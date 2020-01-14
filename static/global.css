@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: orange;
+  --bg-color: #100818;
+  --serif-font: 'IBM Plex Serif';
+  --sans-serif-font: 'IBM Plex Sans';
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: var(--bg-color);
+  color: #fff;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: 'IBM Plex Sans', Roboto, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Ubuntu, Droid Sans, sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #fff;
+}
+
+.u-ff-serif {
+  font-family: var(--serif-font);
+}
+
+.u-ff-sans {
+  font-family: var(--sans-serif-font);
+}
+
+.u-fs-md {
+  font-size: 1.4rem;
+}
+
+.u-color-primary {
+  color: var(--primary-color);
+}
+
+.u-td-none {
+  text-decoration: none;
+}
+
+.u-mt-lg {
+  margin-top: 4rem;
+}
+
+.u-mb-xs {
+  margin-bottom: 1rem;
+}
+
+.u-mb-sm {
+  margin-bottom: 2rem;
+}
+
+.u-mb-md {
+  margin-bottom: 3rem;
+}
+
+.u-cf:before,
+.u-cf:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.o-cta__title {
+  color: var(--primary-color);
+  font-family: var(--serif-font);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.o-cta__title--is-primary {
+  font-size: 3rem;
+}
+
+.o-cta__action {
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 2rem;
+}
+
+@media screen and (max-width: 60em) {
+  .u-fs-sm--xs {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .o-cta__title {
+    font-size: 4rem;
+  }
+
+  .o-cta__title--is-primary {
+    font-size: 3.3rem;
+  }
+}
