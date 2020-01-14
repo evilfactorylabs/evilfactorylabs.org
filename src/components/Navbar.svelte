@@ -83,6 +83,10 @@
     text-align: right;
   }
 
+  ._hidden {
+    display: none;
+  }
+
   @media screen and (min-width: 60em) {
     .c-navbar {
       padding: 3rem 5rem;
@@ -148,5 +152,6 @@
       href="/dukungan">
       Dukung(an)
     </a>
+    <a href="/cerita" class="_hidden">Cerita</a>
   </div>
 </nav>
