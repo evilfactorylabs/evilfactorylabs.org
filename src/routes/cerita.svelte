@@ -128,7 +128,7 @@
           </Typewriter>
           <h4 in:fade={{ delay: 3000, duration: 666 }}>
             Written by
-            <a href="https://twitter.com/faultable">Fariz Rizaldy</a>
+            <a href="mailto:fariz@evilfactory.id">Fariz</a>
             — 14 Jan 2020, 13:37 WIB
           </h4>
         </div>
