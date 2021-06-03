@@ -31,6 +31,7 @@
     line-height: 2rem;
     margin-bottom: 2.5rem;
     font-size: 1.2rem;
+    word-break: break-word;
   }
 
   hr {

@@ -13,6 +13,7 @@
     min-width: 100%;
     min-height: 100%;
     max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
     left: 0;
     top: 0;
@@ -51,7 +52,7 @@
 </svelte:head>
 
 <Transition>
-  <video autoplay muted loop class="o-video">
+  <video autoplay muted loop class="o-video" inline>
     <source src="/bg.mp4" type="video/mp4" />
   </video>
 
