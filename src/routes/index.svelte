@@ -12,6 +12,8 @@
     position: absolute;
     min-width: 100%;
     min-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
     left: 0;
     top: 0;
   }
@@ -71,8 +73,8 @@
     </Container>
 
     <div class="o-footer">
-      <a class="u-td-none" href="mailto:hello@evilfactory.id">
-        hello@evilfactory.id
+      <a class="u-td-none" href="https://evlfctry.pro/contact">
+        evlfctry.pro/contact
       </a>
     </div>
   </div>
