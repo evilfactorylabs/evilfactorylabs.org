@@ -24,7 +24,7 @@
         </p>
         <p class="u-fs-md u-fs-sm--xs u-mb-sm">
           We frequently sharing what we learned by writing on this
-          <a href="https://blog.evilfactory.id">small blog,</a>
+          <a href="//evilfactorylabs.org">small blog,</a>
           if you are interested to do so, yes, just ping us.
         </p>
         <p class="u-fs-md u-fs-sm--xs u-mb-sm">
