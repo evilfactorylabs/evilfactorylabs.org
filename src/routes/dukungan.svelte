@@ -19,7 +19,8 @@
       <Hero>
         <p class="u-fs-md u-fs-sm--xs u-mb-sm">
           Currently we have
-          <a href="https://perkumpulan.evilfactory.id">public forum.</a>
+          <del><a href="https://perkumpulan.evilfactory.id">public forum.</a></del>
+          <a href="https://evilfactorylabs.org">public blog post.</a>
           Beside that, we do
           <a href="https://twitter.com/evilfactorylabs">tweeting</a>
           very often. Just ping us, we are very friendly, seriously.
